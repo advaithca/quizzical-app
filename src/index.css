@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla");
+
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Karla;
+  background-image: url("/public/images/blob1.svg"),url("/public/images/blob2.svg");
+  background-position: 0% 100%, 100% 0%;
+  background-repeat: no-repeat;
+  background-color: #f5f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

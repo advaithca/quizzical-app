@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter");
+
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.Main > h1 {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 37px;
+
+  color: #293264;
+}
+
+.Main > p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #293264;
+}
+
+button {
+  width: 193px;
+  height: 52px;
+  left: 179px;
+  top: 314px;
+
+  background: #4D5B9E;
+  border-radius: 15px;
+  border: 0px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #F5F7FB;
+
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+button:hover {
+  background-color: #4D5BFF;
+}
+
+button:active {
+  background-color: #293264;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: translateX(1px) translateY(1px);
+}
+
+.Question {
+  width: 399px;
+  margin: auto;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-block: 5px;
+}
+
+.options > button {
+  margin-right: 6px;
+  height: fit-content;
+  width: fit-content;
+  left: 148px;
+  top: 353px;
+  background-color: white;
+  color: #293264;
+  border: 0.771045px solid #4D5B9E;
+  border-radius: 7.71045px;
+
+  font-family: Inter;
+  font-size: 10.24px;
+  font-weight: 600px;
+  margin-block: 4px;
+
+}
+
+.options > button:active {
+  background: #D6DBF5;
+  border-radius: 7.71045px;
+  
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: translateX(1px) translateY(1px);
+}
+
+.options > button:focus {
+  background: #D6DBF5;
+  border-radius: 7.71045px;
+}
+.question {
+  margin: auto;
+
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+
+  color: #293264;
+}
+
+hr {
+  width: 399px;
+  height: 0px;
+  left: 75px;
+  top: 470px;
+
+  border: 0.794239px solid #DBDEF0;
+}
+
+.bottom {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.8px;
+  line-height: 15px;
+  text-align: center;
+
+  color: #293264;
+}
