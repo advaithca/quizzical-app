@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {nanoid} from "nanoid";
 
 export default function Question(props) {
+    const [optionArray, setOptionArray] = useState([])
+    const [selectAnswers, setSelectAnswers] = useState([])
     function shuffle(array) {
         let currentIndex = array.length,  randomIndex;
         while (currentIndex != 0) {
@@ -12,18 +14,39 @@ export default function Question(props) {
         }
         return array;
       }
+    
+    useEffect(()=>{
+        let option = props.incorrects
+        option.push(props.answer)
+        let set = [...new Set(option)]
+        option = shuffle(set)
+        setOptionArray(option.map((option)=>(
+            <button key={nanoid()} name={props.id} value={option} dangerouslySetInnerHTML={{__html:  option}} onClick={answerSelector}/>
+        )))
+    },[])
 
-    let options = props.incorrects
-    options.push(props.answer)
-    options = shuffle(options)
-    const opts = options.map((option)=>(
-        <button key={nanoid()} value={option}>{option}</button>
-    ))
+    function answerSelector(event) {
+        const name = event.target.name
+        const value = event.target.value
+        console.log(name,value)
+        setSelectAnswers((prevSelectAnswers)=>(
+            [
+                ...prevSelectAnswers,
+                {
+                    [name]:name,
+                    [value]:value
+                }
+            ]
+        ))
+
+        console.log(selectAnswers)
+      }
+      
     return (
         <div className="Question">
             <div className="question" dangerouslySetInnerHTML={{__html:  props.question}}/>
-            <div className="options">
-                {opts}
+            <div className="options" >
+                {optionArray}
             </div>
             <hr/>
         </div>
