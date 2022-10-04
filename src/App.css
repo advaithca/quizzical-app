@@ -58,11 +58,6 @@ button:hover {
   background-color: #4D5BFF;
 }
 
-button:active {
-  background-color: #293264;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: translateX(1px) translateY(1px);
-}
 
 .Question {
   width: 399px;
