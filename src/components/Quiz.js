@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from "react";
 import Question from "./Question";
 import {nanoid} from "nanoid";
+import Confetti from "react-confetti"
 
 export default function Quiz(props) {
     const [checkAnswers, setCheckAnswers] = useState(false)
@@ -8,7 +9,6 @@ export default function Quiz(props) {
     const [marks, setMarks] = useState()
     const [selectedAnswers, setSelectedAnswers] = useState([])
     const [optionArray, setOptionArray] = useState([])
-    const [clicked, setClicked] = useState(false)
 
     function shuffle(array) {
         let currentIndex = array.length,  randomIndex;
@@ -25,8 +25,8 @@ export default function Quiz(props) {
     function answerSelector(event) {
         const name = event.target.name
         const value = event.target.value
-        setClicked(previous=>!previous)
-        event.target.style.backgroundColor = clicked?"#4d5bff":""
+
+        event.target.style.backgroundColor = "#4d5bff"
         setSelectedAnswers((prevSelectAnswers)=>{
             let found = false
             if(prevSelectAnswers.length>0){
@@ -114,6 +114,7 @@ export default function Quiz(props) {
 
     return (
         <div className="Quiz">
+        {marks === 5 ? <Confetti/> : ''}
             <div className="Quiz--questions">
                 {QuestionsToDisplay}
             </div>

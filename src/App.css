@@ -14,8 +14,8 @@
   font-family: Karla;
   font-style: normal;
   font-weight: 700;
-  font-size: 31.25px;
-  line-height: 37px;
+  font-size: 50px;
+  line-height: 50px;
 
   color: #293264;
 }
@@ -24,8 +24,8 @@
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 20px;
+  line-height: 20px;
   text-align: center;
 
   color: #293264;
@@ -60,7 +60,7 @@ button:hover {
 
 
 .Question {
-  width: 399px;
+  width: 500px;
   margin: auto;
 }
 
@@ -83,7 +83,7 @@ button:hover {
   border-radius: 7.71045px;
 
   font-family: Inter;
-  font-size: 10.24px;
+  font-size: 19px;
   font-weight: 600px;
   margin-block: 4px;
 
@@ -107,8 +107,8 @@ button:hover {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 25px;
+  line-height: 32px;
   text-align: left;
 
   color: #293264;
